@@ -1,11 +1,29 @@
 function highestScore (students) {
     // Code disini
+
+    //membuat kelompok kelas dengan memasukkan kelas menjadi objek baru
+    var classGroup = {};
+    
     for (var i=0; i<students.length; i++) {
-        var kelas = students[i].class;
-        if (students[i].class) {
-          
+      var studentClass = "";
+      var siPintar = "";
+      var nilai = 0;
+      for (j=0; j<students.length; j++) {
+        if (students[i].class === students[j].class && students[j].score > nilai) { //mensortir nilai tertinggi berdasarkan kelas yang sama
+          studentClass = students[i].class;
+          nilai = students[j].score;
+          siPintar = students[j].name;
         }
+      }
+      
+      //mencetak hasil sortir ke dalam objek
+      classGroup[studentClass] = {
+      nama: siPintar,
+      score: nilai
+      }
     }
+    console.log();
+    return classGroup;
   }
   
   // TEST CASE
