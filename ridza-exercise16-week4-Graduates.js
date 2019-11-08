@@ -22,7 +22,7 @@ function graduates (students) {
       } else {//kondisi jika sudah bukan pertama kali
 
         //filter nilai diatas 75
-        if (students[x]['score'] > 75 ) {
+        if (students[x]['score'] > 75) {
           siswaLulus.name = students[x]['name'];
           siswaLulus.score = students[x]['score'];
           kelasLulus[students[x]['class']].push(siswaLulus);
@@ -32,11 +32,6 @@ function graduates (students) {
 
     console.log();
     return kelasLulus;
-
-
-
-
-
   }
   
 
@@ -77,7 +72,7 @@ function graduates (students) {
   console.log(graduates([
     {
       name: 'Alexander',
-      score: 10,
+      score: 100,
       class: 'foxes'
     },
     {
